@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">MovieVerse</string>
+    <string name="home_nav">Home</string>
+    <string name="search_nav">Search</string>
+    <string name="search">Search</string>
+    <string name="reference">Reference:</string>
+    <string name="views">Views:</string>
+    <string name="vote_count">Vote Count:</string>
+    <string name="vote_average">Average Rating:</string>
+    <string name="vo">VO:</string>
+    <string name="release_date">Release date:</string>
+    <string name="description">Description:</string>
+    <string name="recommendation">Recommendation</string>
+    <string name="like">Like</string>
+    <string name="today_s_popular_movies">Today\'s Popular Movies:</string>
+    <string name="liked_movies">Liked Movies:</string>
+    <string name="movie_s_name">Movie\'s Name</string>
+    <string name="en">en</string>
+    <string name="na">NA</string>
+    <string name="scan">Scan</string>
+    <string name="by_genre">By Genre :</string>
+    <string name="liked">Liked</string>
+    <string name="scan_qr">Scan QR</string>
+    <string name="overview">Overview:</string>
+    <string name="movie_s_title">Movie\'s Title</string>
+</resources>

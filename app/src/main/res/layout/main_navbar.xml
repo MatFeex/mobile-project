@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home_page"
+        android:title="@string/home_nav"
+        android:icon="@drawable/ic_home"
+        />
+    <item
+        android:id="@+id/search_bar"
+        android:title="@string/search_nav"
+        android:icon="@drawable/ic_search"/>
+    <item
+        android:id="@+id/liked_page"
+        android:title="@string/liked"
+        android:icon="@drawable/ic_liked"/>
+    <item
+        android:id="@+id/qr_code"
+        android:title="@string/scan_qr"
+        android:icon="@drawable/ic_qrcode"/>
+
+</menu>

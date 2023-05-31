@@ -13,7 +13,8 @@ object MovieProperties {
             false,
             "2022-12-14",
             "en",
-            7.705
+            7.705,
+            8256
         ),
         MovieModel(
             "Fast & Furious X",
@@ -22,7 +23,8 @@ object MovieProperties {
             false,
             "2023-05-17",
             "en",
-            7.03
+            7.03,
+            651
         ),
         MovieModel(
             "Interstellar",
@@ -31,7 +33,8 @@ object MovieProperties {
             false,
             "2014-11-05",
             "en",
-            8.402
+            8.402,
+            31476
         ),
         MovieModel(
             "Monsters, Inc.",
@@ -40,7 +43,8 @@ object MovieProperties {
             false,
             "2001-11-01",
             "en",
-            7.831
+            7.831,
+            16799
         )
     )
 

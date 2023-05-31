@@ -110,11 +110,11 @@
         android:textSize="18sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/views"
+        android:text="@string/popularity"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textStyle="bold" />
     <TextView
-        android:id="@+id/movie_popularity"
+        android:id="@+id/popularity_item"
         android:textSize="17sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -128,7 +128,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textStyle="bold" />
     <TextView
-        android:id="@+id/movie_vote"
+        android:id="@+id/vote_count_item"
         android:textSize="17sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -142,7 +142,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textStyle="bold" />
     <TextView
-        android:id="@+id/movie_vote_avg"
+        android:id="@+id/vote_average_item"
         android:textSize="17sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

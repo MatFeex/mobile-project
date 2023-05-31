@@ -4,9 +4,6 @@
     <string name="search_nav">Search</string>
     <string name="search">Search</string>
     <string name="reference">Reference:</string>
-    <string name="views">Views:</string>
-    <string name="vote_count">Vote Count:</string>
-    <string name="vote_average">Average Rating:</string>
     <string name="vo">VO:</string>
     <string name="release_date">Release date:</string>
     <string name="description">Description:</string>
@@ -23,4 +20,7 @@
     <string name="scan_qr">Scan QR</string>
     <string name="overview">Overview:</string>
     <string name="movie_s_title">Movie\'s Title</string>
+    <string name="vote_count">Review:</string>
+    <string name="vote_average">Average Rating:</string>
+    <string name="popularity">Popularity Score:</string>
 </resources>

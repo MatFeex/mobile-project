@@ -54,9 +54,9 @@ class ResultPage : Fragment() {
         releaseDateTextView = view.findViewById(R.id.movie_release_date)
         originalLanguageTextView = view.findViewById(R.id.movie_vo)
         idTextView = view.findViewById(R.id.movie_ref)
-        popularityTextView = view.findViewById(R.id.movie_popularity)
-        voteCountTextView = view.findViewById(R.id.movie_vote)
-        voteAverageTextView = view.findViewById(R.id.movie_vote_avg)
+        voteCountTextView = view.findViewById(R.id.vote_count_item)
+        voteAverageTextView = view.findViewById(R.id.vote_average_item)
+        popularityTextView = view.findViewById(R.id.popularity_item)
         return view
     }
 
@@ -64,15 +64,15 @@ class ResultPage : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // Retrieve the data passed through the Bundle
+        val id = arguments?.getString("id")
         val title = arguments?.getString("title")
         var posterPath = arguments?.getString("poster_path")
         val overview = arguments?.getString("overview")
         val releaseDate = arguments?.getString("release_date")
         val originalLanguage = arguments?.getString("original_language")
-        val id = arguments?.getString("id")
-        val popularity = arguments?.getDouble("popularity")
         val voteCount = arguments?.getInt("vote_count")
         val voteAverage = arguments?.getDouble("vote_average")
+        val popularity = arguments?.getDouble("popularity")
 
         // Display the data in the corresponding TextViews
         titleTextView.text = title
@@ -80,9 +80,9 @@ class ResultPage : Fragment() {
         releaseDateTextView.text = releaseDate
         originalLanguageTextView.text = originalLanguage
         idTextView.text = id
-        popularityTextView.text = popularity.toString()
         voteCountTextView.text = voteCount.toString()
         voteAverageTextView.text = voteAverage.toString()
+        popularityTextView.text = popularity.toString()
 
         // Load the image from the posterPath URL using Glide
         if (!posterPath.isNullOrEmpty()) {
@@ -124,7 +124,9 @@ class ResultPage : Fragment() {
                     true,
                     releaseDate!!,
                     originalLanguage!!,
-                    voteAverage!!
+                    voteAverage!!,
+                    voteCount!!,
+                    popularity!!
                 )
                 MainActivity.movieList.add(movie)
                 button.isEnabled = false

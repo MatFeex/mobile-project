@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     >
@@ -28,13 +29,13 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:visibility="invisible"
-        android:background="@color/purple_200"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintVertical_bias="0.312"
+        tools:layout_editor_absoluteX="0dp" />
 
     <TextView
-        android:id="@+id/name_item"
+        android:id="@+id/title_item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/marginDefaultComponent"
@@ -47,16 +48,54 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/marginDefaultComponent"
+        android:layout_marginTop="10dp"
         android:text="@string/vote_average"
         app:layout_constraintStart_toEndOf="@+id/cardView"
-        app:layout_constraintTop_toBottomOf="@+id/name_item" />
+        app:layout_constraintTop_toBottomOf="@+id/title_item" />
     <TextView
         android:id="@+id/vote_average_item"
+        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="120dp"
         app:layout_constraintStart_toEndOf="@+id/cardView"
-        app:layout_constraintTop_toBottomOf="@+id/name_item" />
+        app:layout_constraintTop_toBottomOf="@+id/title_item" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vote_count"
+        android:layout_marginStart="@dimen/marginDefaultComponent"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/vote_average_item" />
+    <TextView
+        android:id="@+id/vote_count_item"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        app:layout_constraintStart_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/vote_average_item" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/popularity"
+        android:layout_marginStart="@dimen/marginDefaultComponent"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/vote_count_item" />
+    <TextView
+        android:id="@+id/popularity_item"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="130dp"
+        app:layout_constraintStart_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/vote_count_item" />
+
 
     <ImageView
         android:id="@+id/liked_icon"

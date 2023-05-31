@@ -12,9 +12,9 @@ object MovieBundleCreator {
         bundle.putString("release_date", movie.release_date)
         bundle.putString("original_language", movie.original_language)
         bundle.putString("id", movie.id.toString())
-        bundle.putDouble("popularity", movie.popularity)
         bundle.putInt("vote_count", movie.vote_count)
         bundle.putDouble("vote_average", movie.vote_average)
+        bundle.putDouble("popularity", movie.popularity)
         return bundle
     }
 }

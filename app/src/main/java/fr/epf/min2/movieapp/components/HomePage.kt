@@ -51,7 +51,7 @@ class HomePage(private val context: MainActivity, private val fragmentManager: F
                         if (response.isSuccessful) {
                             val searchResult = response.body()
                             movies = searchResult?.results ?: emptyList()
-                            Log.d("Search", "request sucess")
+                            Log.d("Search", "request success")
                             // Check if any movies were found
                             if (movies.isNotEmpty()) {
                                 // Display the ResultFragment with the data of the first movie
@@ -78,7 +78,7 @@ class HomePage(private val context: MainActivity, private val fragmentManager: F
         })
 
         // ------------------ HOME CONTENT -----------------------
-        fetchByTrend("en")
+        fetchByPopular("en")
         verticalRecyclerView = view.findViewById(R.id.vertical_recycler_view)
         verticalRecyclerView.adapter = MovieAdapter(context, popularMoviesList, R.layout.movie_vertical)
         verticalRecyclerView.addItemDecoration(SpacingAdapter(50))
@@ -112,7 +112,7 @@ class HomePage(private val context: MainActivity, private val fragmentManager: F
         }
     }
 
-    private fun updateTrendList(newMoviesList: List<MovieModel>) {
+    private fun updatePopularList(newMoviesList: List<MovieModel>) {
         // Clear the existing popularMoviesList and add all the new movies
         popularMoviesList.clear()
         popularMoviesList.addAll(newMoviesList)
@@ -120,15 +120,15 @@ class HomePage(private val context: MainActivity, private val fragmentManager: F
         verticalRecyclerView.adapter?.notifyDataSetChanged()
     }
 
-    private fun fetchByTrend(language: String) {
+    private fun fetchByPopular(language: String) {
         val call = movieApiService.getPopularMovies(Credentials.API_KEY, language)
         call.enqueue(object : Callback<ResultsResearch> {
             override fun onResponse(call: Call<ResultsResearch>, response: Response<ResultsResearch>) {
                 if (response.isSuccessful) {
                     val searchResult = response.body()
-                    val trendingMovies = searchResult?.results ?: emptyList()
-                    val trendingMovieModels = trendingMovies.map { mapToMovieModel(it) }
-                    updateTrendList(trendingMovieModels)
+                    val popularMovies = searchResult?.results ?: emptyList()
+                    val popularMovieModels = popularMovies.map { mapToMovieModel(it) }
+                    updatePopularList(popularMovieModels)
                 }
             }
             override fun onFailure(call: Call<ResultsResearch>, t: Throwable) {
@@ -145,7 +145,9 @@ class HomePage(private val context: MainActivity, private val fragmentManager: F
             liked = false,
             releaseDate = movie.release_date,
             originalLanguage = movie.original_language,
-            voteAverage = movie.vote_average
+            voteAverage = movie.vote_average,
+            voteCount = movie.vote_count,
+            popularity = movie.popularity
         )
     }
 

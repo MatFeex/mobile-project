@@ -22,8 +22,10 @@ class MovieAdapter(
     // ViewHolder class to hold the views of each item
     class ViewHolder(view: View):RecyclerView.ViewHolder(view){
         val movieImage:ImageView=view.findViewById(R.id.movie_image)
-        val movieName:TextView?=view.findViewById(R.id.name_item)
+        val movieName:TextView?=view.findViewById(R.id.title_item)
         val movieVoteAverage:TextView?=view.findViewById(R.id.vote_average_item)
+        val movieVoteCount:TextView?=view.findViewById(R.id.vote_count_item)
+        val moviePopularity:TextView?=view.findViewById(R.id.popularity_item)
         val likedIcon:ImageView=view.findViewById(R.id.liked_icon)
     }
 
@@ -45,6 +47,8 @@ class MovieAdapter(
         // Set the title and vote average of the movie
         holder.movieName?.text=currentMovie.title
         holder.movieVoteAverage?.text= currentMovie.voteAverage.toString()
+        holder.movieVoteCount?.text= currentMovie.voteCount.toString()
+        holder.moviePopularity?.text= currentMovie.popularity.toString()
 
         if (holder.likedIcon != null) {
             val likedImageResource = if (currentMovie.liked) {

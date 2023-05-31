@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent"
-    android:layout_marginStart="@dimen/marginDefault"
-    android:orientation="vertical"
-    app:cardCornerRadius="20dp"
-    app:cardElevation="5dp">
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_width="wrap_content"
+android:layout_height="match_parent"
+android:layout_marginStart="@dimen/marginDefault"
+android:orientation="vertical"
+app:cardCornerRadius="20dp"
+app:cardElevation="5dp">
+
+<FrameLayout
+    android:layout_width="254dp"
+    android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/movie_image"
-        android:layout_width="254dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop" />
 
@@ -18,8 +22,12 @@
         android:id="@+id/liked_icon"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_margin="@dimen/marginDefaultComponent"
         android:src="@drawable/ic_unliked"
+        android:layout_gravity="top|end"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
         app:tint="#C82323" />
+
+</FrameLayout>
 
 </androidx.cardview.widget.CardView>

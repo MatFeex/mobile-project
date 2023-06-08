@@ -10,6 +10,7 @@
     <string name="recommendation">Recommendation</string>
     <string name="like">Like</string>
     <string name="today_s_popular_movies">Today\'s Popular Movies:</string>
+    <string name="search_movies_by_genre">Search movies by genre:</string>
     <string name="liked_movies">Liked Movies:</string>
     <string name="movie_s_name">Movie\'s Name</string>
     <string name="en">en</string>

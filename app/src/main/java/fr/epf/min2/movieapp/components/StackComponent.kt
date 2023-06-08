@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import fr.epf.min2.movieapp.R
 
-class StackComponent : Fragment() {
+class  StackComponent : Fragment() {
     var fragmentCount = 0
 
     override fun onCreateView(
